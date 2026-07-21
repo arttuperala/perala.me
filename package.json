@@ -1,0 +1,20 @@
+{
+  "name": "perala.me",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arttuperala/perala.me.git"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^8.1.5"
+  },
+  "dependencies": {
+    "@fontsource/league-gothic": "^5.3.0"
+  }
+}

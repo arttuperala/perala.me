@@ -1,0 +1,101 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body {
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  margin: 0 auto;
+  min-height: 100vh;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+h1 {
+  -webkit-backface-visibility: hidden;
+  filter: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><filter id="gaussian_blur"><feGaussianBlur in="SourceGraphic" stdDeviation="0" /></filter></defs></svg>#gaussian_blur');
+  font-family: "League Gothic", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 40vmin;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-weight: 400;
+  margin: 10vmin 0;
+  rotate: -2deg;
+  text-align: center;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+#links {
+  position: relative;
+  text-align: center;
+  z-index: 100;
+}
+
+#links a {
+  position: relative;
+  display: inline-block;
+  font-size: 2.5em;
+  font-weight: 600;
+  margin: 0 0.5em;
+  padding: 0.2em 0.6em;
+  text-decoration: none;
+  color: currentColor;
+}
+
+/* Center-expanding animated underline */
+#links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0.1em;
+  left: 50%;
+  width: 70%;
+  height: 3px;
+  background-color: currentColor;
+  border-radius: 2px;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+#links a:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+#links a:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 4px;
+}
+
+@media screen and (max-width: 720px) {
+  #links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  #links a {
+    margin: 0;
+  }
+}
+
+#overlay {
+  cursor: pointer;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
