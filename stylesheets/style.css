@@ -11,6 +11,7 @@ html {
 body {
   font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   margin: 0 auto;
+  padding: 1px;
   min-height: 100vh;
   transition: background-color 0.15s, color 0.15s;
 }
